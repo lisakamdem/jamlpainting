@@ -290,11 +290,11 @@ input:focus, select:focus, textarea:focus{
 }
 
 input#name:focus:valid, input#email:focus:valid{
-	background : rgb(238,130,238) url(./img/valid.png) bottom right/contain no-repeat;
+	background : rgb(238,130,238) url(/img/valid.png) bottom right/contain no-repeat;
 }
 
 input#name:focus:invalid, input#email:focus:invalid{
-	background : rgb(240,230,140) url(./img/invalid.jpg) bottom right/contain no-repeat;
+	background : rgb(240,230,140) url(/img/invalid.jpg) bottom right/contain no-repeat;
 }
 textarea#message:focus:valid{
 	background-color: rgb(238,130,238);
