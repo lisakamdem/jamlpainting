@@ -39,7 +39,7 @@ const handleSubmit = (event) => {
 						<div class="box">
 							<h2>John</h2>
 							<p>John&apos;s painting</p>
-              <button><Link href="/John's Page/John">View Paintings</Link></button>
+              <button><Link href="/John">View Paintings</Link></button>
 						</div>
 						<div class="box box2">
 							<h2>Axel</h2>
@@ -49,7 +49,7 @@ const handleSubmit = (event) => {
 						<div class="box box3">
 							<h2>Michelle</h2>
 							<p>Michelle&apos;s painting</p>
-							<button><Link href="./Michelle's Page/Michelle">View Paintings</Link></button>
+							<button><Link href="./Michelle">View Paintings</Link></button>
 						</div>
 						<div class="box">
 							<h2>Lisa</h2>

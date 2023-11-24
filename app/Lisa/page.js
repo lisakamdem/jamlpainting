@@ -108,7 +108,7 @@ export default function Page() {
 			))}
     </div>
 
-      {fullImage && (
+      {fullImage && ( 
         <div className="full-img" id="full-img">
           <img src={fullImageSrc} id="fullimg" alt="Full Size" />
           <span onClick={closeImage}>X</span>
