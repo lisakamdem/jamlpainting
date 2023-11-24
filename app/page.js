@@ -38,22 +38,22 @@ const handleSubmit = (event) => {
 					<div class ="flex">
 						<div class="box">
 							<h2>John</h2>
-							<p>John's painting</p>
+							<p>John&apos;s painting</p>
               <button><Link href="/John's Page/John">View Paintings</Link></button>
 						</div>
 						<div class="box box2">
 							<h2>Axel</h2>
-							<p>Axel's painting</p>
+							<p>Axel&apos;s painting</p>
 							<button><a href="axel's page.html">View Paintings</a></button>
 						</div>
 						<div class="box box3">
 							<h2>Michelle</h2>
-							<p>Michelle's painting</p>
+							<p>Michelle&apos;s painting</p>
 							<button><Link href="./Michelle's Page/Michelle">View Paintings</Link></button>
 						</div>
 						<div class="box">
 							<h2>Lisa</h2>
-							<p>Lisa's painting</p>
+							<p>Lisa&apos;s painting</p>
 							<button><Link href="./Lisa">View Paintings</Link></button>
 						</div>
               <div class="card w-96 bg-base-100 shadow-xl image-full">

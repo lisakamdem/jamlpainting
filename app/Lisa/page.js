@@ -114,7 +114,7 @@ export default function Page() {
           <span onClick={closeImage}>X</span>
         </div>
       )}
-		<FavoritesPage favorites={favorites} onRemoveFavorite={handleRemoveFavorite} />
+		     <FavoritesPage favorites={favorites} onRemoveFavorite={handleRemoveFavorite} />
       <Footer />
 
     </>
