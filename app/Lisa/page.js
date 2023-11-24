@@ -116,7 +116,7 @@ export default function Page() {
       )}
 		     <FavoritesPage favorites={favorites} onRemoveFavorite={handleRemoveFavorite} />
       <Footer />
-
+{/*jjj*/}
     </>
   );
 }
