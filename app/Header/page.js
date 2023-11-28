@@ -27,23 +27,23 @@ export default function Header() {
 	  };
     return(
         <header>
-				<div class ="flex">
-					<div class ="logo">
-						<Link href="../page">J.A.M.L Paintings</Link>
+				<div className ="flex">
+					<div className ="logo">
+						<Link href="./page">J.A.M.L Paintings</Link>
 					</div>
 					<nav>
 						<button id="nav-toggle" className="hamburger-menu" onClick={() => { toggleNavMenu(); toggleNavMenuJS(); }}>
-							<span class="strip"></span>
-							<span class="strip"></span>
-							<span class="strip"></span>
+							<span className="strip"></span>
+							<span className="strip"></span>
+							<span className="strip"></span>
 						</button>
 							<ul id= "nav-menu-container" className={isNavMenu ? 'show' : ''} >
-							<li><Link href="../page">Home</Link></li>
+							<li><Link href="./page">Home</Link></li>
 							<li className="nested">
 								<Link href="#boxes">Artist</Link>
 								<ul>
 								<li><Link href="./Lisa">Lisa</Link></li>
-								<li><Link href="/Michelle's Page/Michelle">Michelle</Link></li>
+								<li><Link href="./Michelle">Michelle</Link></li>
 								<li><a href="john's page.html">John</a></li>
 								<li><a href="axel's page.html">Axel</a></li>
 								</ul>

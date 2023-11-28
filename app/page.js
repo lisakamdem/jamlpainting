@@ -78,13 +78,13 @@ const handleSubmit = (event) => {
 				<section class= "contact-us"  id="contactus">
 					<h1>Contact us</h1>
 					<div class= "flex">
-						<div class= "contact-form">
+						<div class= "contact-form flex items-center justify-center">
 							<form id="contact-form" onSubmit={handleSubmit}>
 							<p>required values are marked(*)</p>
 								<input type="text" name="name" id="name" placeholder="Name*" class="input input-bordered" required />
 								<input type="email" name="email" id="email" placeholder="Email*" class="input input-bordered" required /> 
 								<textarea id="message" placeholder="Please type your bio and how many paintings you want to be posted on your page*" class="textarea textarea-bordered" required ></textarea>
-                <button type="submit" id="formbutton" class="btn btn-wide m-16 mt-2 hover:bg-green-500 text-white ">Submit</button>
+                				<button type="submit" id="formbutton" class="btn btn-wide m-16 mt-2 hover:bg-green-500 text-white ">Submit</button>
 							</form>
 						</div>	
 					</div>	
