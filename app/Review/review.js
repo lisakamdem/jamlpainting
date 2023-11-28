@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useUserAuth } from "../Header/_utils/auth-context";
 
-export default function newReview({onAddReview}) {
+export default function NewReview({onAddReview}) {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");

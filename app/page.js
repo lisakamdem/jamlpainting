@@ -78,7 +78,7 @@ const handleSubmit = (event) => {
 				<section class= "contact-us"  id="contactus">
 					<h1>Contact us</h1>
 					<div class= "flex">
-						<div class= "contact-form flex items-center justify-center">
+						<div className= "contact-form flex items-center justify-center">
 							<form id="contact-form" onSubmit={handleSubmit}>
 							<p>required values are marked(*)</p>
 								<input type="text" name="name" id="name" placeholder="Name*" class="input input-bordered" required />
