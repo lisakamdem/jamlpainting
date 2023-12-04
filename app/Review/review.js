@@ -7,7 +7,7 @@ export default function NewReview({onAddReview}) {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
-    const [rating, setRating] = useState(0);
+    const [rating, setRating] = useState(5);
     const { user} = useUserAuth();
 
 
@@ -27,7 +27,7 @@ export default function NewReview({onAddReview}) {
         console.log(data);
         onAddReview(data);
 
-        setRating(0);
+        setRating(5);
         setName("");
         setEmail("");
         setMessage("");
@@ -49,7 +49,7 @@ export default function NewReview({onAddReview}) {
 
     return (
         <div>
-            <div className="contact-form ml-60 mb-10">
+            <div className="contact-form ml-80 mb-10 mt-8">
                 <form id="contact-form" onSubmit={handleSubmit}>
             
                     <div className="rating rating-lg ml-20 ">{stars}</div>

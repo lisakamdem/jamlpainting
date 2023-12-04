@@ -56,16 +56,6 @@ const handleSubmit = (event) => {
 							<p>Lisa&apos;s painting</p>
 							<button><Link href="./Lisa">View Paintings</Link></button>
 						</div>
-              <div class="card w-96 bg-base-100 shadow-xl image-full">
-              <figure><img src="/img/logo.png" alt="Shoes" /></figure>
-              <div class="card-body">
-                <h2 class="card-title">Test</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div class="card-actions justify-end">
-                <button><Link href="../Lisa">View Paintings</Link></button>
-                </div>
-              </div>
-            </div>
 					</div>
 				</section>
 			
@@ -77,13 +67,13 @@ const handleSubmit = (event) => {
 				
 				<section class= "contact-us"  id="contactus">
 					<h1>Contact us</h1>
-					<div class= "flex">
-						<div className= "contact-form flex items-center justify-center">
+					<div className= "flex">
+						<div className= "contact-form">
 							<form id="contact-form" onSubmit={handleSubmit}>
-							<p>required values are marked(*)</p>
-								<input type="text" name="name" id="name" placeholder="Name*" class="input input-bordered" required />
-								<input type="email" name="email" id="email" placeholder="Email*" class="input input-bordered" required /> 
-								<textarea id="message" placeholder="Please type your bio and how many paintings you want to be posted on your page*" class="textarea textarea-bordered" required ></textarea>
+							<p style={{color: "black"}}>required values are marked(*)</p>
+								<input type="text" name="name" id="name" placeholder="Name*" className="input input-bordered" required />
+								<input type="email" name="email" id="email" placeholder="Email*" className="input input-bordered" required /> 
+								<textarea id="message" placeholder="Please type your bio and how many paintings you want to be posted on your page*" className="textarea textarea-bordered" required ></textarea>
                 				<button type="submit" id="formbutton" class="btn btn-wide m-16 mt-2 hover:bg-green-500 text-white ">Submit</button>
 							</form>
 						</div>	

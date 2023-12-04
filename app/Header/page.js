@@ -6,12 +6,17 @@ import React, { useState } from "react";
 
 export default function Header() {
 
-	const {user,gitHubSignIn, firebaseSignOut } = useUserAuth();
+	const {user,gitHubSignIn, firebaseSignOut, googleSignIn } = useUserAuth();
     const[isNavMenu, setIsNavMenu] = useState(false);
 
-	const handleSignIn = async () => {
+	const handleGitHubSignIn = async () => {
 		await gitHubSignIn();
 	};
+
+	const handleGoogleSignIn = async () => {
+		await googleSignIn();
+	};
+
 	const handleSignOut = async () => {
 		await firebaseSignOut();
 	}
@@ -29,7 +34,7 @@ export default function Header() {
         <header>
 				<div className ="flex">
 					<div className ="logo">
-						<Link href="./page">J.A.M.L Paintings</Link>
+						<Link href="./">J.A.M.L Paintings</Link>
 					</div>
 					<nav>
 						<button id="nav-toggle" className="hamburger-menu" onClick={() => { toggleNavMenu(); toggleNavMenuJS(); }}>
@@ -38,27 +43,48 @@ export default function Header() {
 							<span className="strip"></span>
 						</button>
 							<ul id= "nav-menu-container" className={isNavMenu ? 'show' : ''} >
-							<li><Link href="./page">Home</Link></li>
-							<li className="nested">
-								<Link href="#boxes">Artist</Link>
-								<ul>
-								<li><Link href="./Lisa">Lisa</Link></li>
-								<li><Link href="./Michelle">Michelle</Link></li>
-								<li><a href="john's page.html">John</a></li>
-								<li><a href="axel's page.html">Axel</a></li>
-								</ul>
-							</li>
-							<li><Link href="#aboutus">About Us</Link></li>
-							<li><Link href="#contactus">Contact Us</Link></li>
-							<li><Link href="/favorite">Favorites</Link></li>
-							<li><a href="RP.html">Reference page</a></li>
-							<li>
-								{user ? (
-									<button className= "btn" onClick={handleSignOut}>Welcome, {user.displayName ? `${user.displayName} (${user.email})` : user.email}
-									 Sign Out</button>
-								) : (
-									<button className= "btn btn-xs text-green-400 bg-black  hover:text-black hover:bg-green-400" onClick={handleSignIn}>Sign In with GitHub</button>
-								)}
+								<li><Link href="./">Home</Link></li>
+								<li className="nested">
+									<Link href="#boxes">Artist</Link>
+									<ul>
+										<li><Link href="./Lisa">Lisa</Link></li>
+										<li><Link href="./Michelle">Michelle</Link></li>
+										<li><a href="john's page.html">John</a></li>
+										<li><a href="axel's page.html">Axel</a></li>
+									</ul>
+								</li>
+								<li><Link href="#aboutus">About Us</Link></li>
+								<li><Link href="#contactus">Contact Us</Link></li>
+								<li><Link href="/favorite">Favorites</Link></li>
+								<li><a href="RP.html">Reference page</a></li>
+								<li>
+									{user ? (
+										<button className="text-xs" style={{color: "rgb(173,216,230)"}} onClick={handleSignOut}>
+										Welcome, {user.displayName ? `${user.displayName} (${user.email})` : user.email} Sign Out
+										</button>
+									) : (
+										<div className="nested">
+										<button className="text-sm text-black" style={{color: "rgb(173,216,230)"}}>Sign In</button>
+										<ul>
+											<li>
+											<a
+												className="text-xs"
+												onClick={handleGitHubSignIn}
+											>
+												GitHub
+											</a>
+											</li>
+											<li>
+											<a
+												className="text-xs"
+												onClick={handleGoogleSignIn}
+											>
+											    Google
+											</a>
+											</li>
+										</ul>
+										</div>
+										)}
 								</li>
 							</ul>	
 					</nav>
