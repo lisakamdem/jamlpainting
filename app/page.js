@@ -89,12 +89,12 @@ const handleSubmit = async (event) => {
 					<div className= "contact-form">
 					{showSuccessAlert && (
 						<div role="alert" className="alert alert-success mb-4">
-						<svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-						<span>Thank you for your message! We will get back to you as soon as possible.</span>
+							<svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+							<span>Thank you for your message! We will get back to you as soon as possible.</span>
 						</div>
 					)}
 						<form id="contact-form" onSubmit={handleSubmit}>
-						<p style={{color: "black"}}>required values are marked(*)</p>
+							<p style={{color: "black"}}>required values are marked(*)</p>
 							<input type="text" name="name" id="name" placeholder="Name*" className="input input-bordered" value={name} onChange={(event) => setName(event.target.value)} required />
 							<input type="email" name="email" id="email" placeholder="Email*" className="input input-bordered" value={email} onChange={(event) => setEmail(event.target.value)} required /> 
 							<textarea id="message" placeholder="Please type your bio and how many paintings you want to be posted on your page*" className="textarea textarea-bordered" value={message}  onChange={(event) => setMessage(event.target.value)} required ></textarea>

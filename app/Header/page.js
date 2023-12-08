@@ -22,14 +22,13 @@ export default function Header() {
 	}
 
     const toggleNavMenu = () => {
+		var navMenu = document.getElementById("nav-menu-container");
+		navMenu.style.display = navMenu.offsetParent === null ? "block" : "none";
         setIsNavMenu(!isNavMenu);
     };
 
 
-	const toggleNavMenuJS = () => {
-		var navMenu = document.getElementById("nav-menu-container");
-		navMenu.style.display = navMenu.offsetParent === null ? "block" : "none";
-	  };
+	
     return(
         <header>
 				<div className ="flex">
@@ -37,12 +36,13 @@ export default function Header() {
 						<Link href="/">J.A.M.L Paintings</Link>
 					</div>
 					<nav>
-						<button id="nav-toggle" className="hamburger-menu" onClick={() => { toggleNavMenu(); toggleNavMenuJS(); }}>
+						<button id="nav-toggle" className="hamburger-menu" onClick={() => { toggleNavMenu(); }}>
 							<span className="strip"></span>
 							<span className="strip"></span>
 							<span className="strip"></span>
 						</button>
-							<ul id= "nav-menu-container" className={isNavMenu ? 'show' : ''} >
+							<ul id= "nav-menu-container" 
+							 >
 								<li><Link href="/">Home</Link></li>
 								<li className="nested">
 									<Link href="#boxes">Artist</Link>
@@ -60,30 +60,24 @@ export default function Header() {
 								<li>
 									{user ? (
 										<button className="text-xs" style={{color: "rgb(173,216,230)"}} onClick={handleSignOut}>
-										Welcome, {user.displayName ? `${user.displayName} (${user.email})` : user.email} Sign Out
+											Welcome, {user.displayName ? `${user.displayName} (${user.email})` : user.email} Sign Out
 										</button>
 									) : (
-										<div className="nested">
-										<button className="text-sm text-black" style={{color: "rgb(173,216,230)"}}>Sign In</button>
-										<ul>
-											<li>
-											<a
-												className="text-xs"
-												onClick={handleGitHubSignIn}
-											>
-												GitHub
-											</a>
-											</li>
-											<li>
-											<a
-												className="text-xs"
-												onClick={handleGoogleSignIn}
-											>
-											    Google
-											</a>
-											</li>
-										</ul>
-										</div>
+											<div className="nested">
+												<button className="text-sm text-black" style={{color: "rgb(173,216,230)"}}>Sign In</button>
+												<ul>
+													<li>
+														<a className="text-xs" onClick={handleGitHubSignIn}>
+															GitHub
+														</a>
+													</li>
+													<li>
+														<a className="text-xs" onClick={handleGoogleSignIn}>
+															Google
+														</a>
+													</li>
+												</ul>
+											</div>
 										)}
 								</li>
 							</ul>	

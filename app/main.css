@@ -351,12 +351,12 @@ footer{
 	}
 }
 
-@media (min-width: 651px){
+
 	nav ul{
 		display: block ;
 	}
 
-}
+
 
 @media (max-width: 650px){
 	h1{
@@ -399,6 +399,25 @@ nav ul li a {
 
 
 }
+
+/* Media query for smaller screens */
+@media screen and (max-width: 750px) {
+	.artist-boxes .flex {
+	  flex-direction: column; /* Stack boxes vertically on smaller screens */
+	}
+  
+	/* Adjust styling for boxes on smaller screens */
+	.box {
+	  width: 100%; /* Make each box take up the full width */
+	  margin: 0 0 20px 0; /* Add spacing between stacked boxes */
+	}
+  
+	/* Optional: Adjust styling for box2 and box3 */
+	.box2,
+	.box3 {
+	  margin: 0; /* Reset margins for boxes 2 and 3 */
+	}
+  }
 
 @media (max-width: 400px) {
     h1 {

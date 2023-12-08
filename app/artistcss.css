@@ -228,12 +228,15 @@ footer p{
 
 
 
+
 @media (min-width: 651px){
+
 	nav ul{
 		display: block;
 	}
 
 }
+
 
 @media (max-width: 650px){
 	h1{

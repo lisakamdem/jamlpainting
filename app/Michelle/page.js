@@ -16,7 +16,6 @@ export default function Page() {
   const [reviews, setReviews] = useState([]);
   const {user} = useUserAuth();
 
-
  const handleButtonClick = (paintingSrc) => {
 
     // Add or remove the painting from favorites
@@ -70,6 +69,7 @@ useEffect(() => {
         await deleteReview(review.id, user.uid);
         setReviews((prevReviews) => prevReviews.filter((r) => r.id !== review.id));
       } else {
+        window.alert("You are not authorized to delete this review.");
         console.error("User is not authorized to delete this review.");
       }
     } catch (error) {
@@ -77,7 +77,6 @@ useEffect(() => {
     }
   };
   
-
   const openImage = (src) => {
     setFullImageSrc(src);
     setFullImage(true);
@@ -116,26 +115,25 @@ useEffect(() => {
        
                     {/* Map through the paintings and create gallery items */}
                     {paintings.map((painting) => (
-                    <div className="gallery" key={painting.src}>
-                        <img src={painting.src} alt={painting.alt} onClick={() => openImage(painting.src)} />
-                        <div className="desc">
-                        <p>{painting.title}</p>
+                <div className="gallery" key={painting.src}>
+                    <img src={painting.src} alt={painting.alt} onClick={() => openImage(painting.src)} />
+                    <div className="desc">
+                    <p>{painting.title}</p>
 
                     {user ? (
-                    <button
-                    className={`btn hover:bg-red-700 hover:text-black ${favorites.includes(painting.src) ? 'favorite-btn' : ''}  `}
-                    onClick={() => handleButtonClick(painting.src)}>
-                            
-                            Favorite
-                    </button> 
-                     ): (
-            <div>
-                <p className="text-sm">Sign in to add to favorites</p>
-            </div>
-            )}
+                        <button
+                        className={`btn hover:bg-red-700 hover:text-black ${favorites.includes(painting.src) ? 'favorite-btn' : ''}  `}
+                        onClick={() => handleButtonClick(painting.src)}>
+                                Favorite
+                        </button> 
+                        ): (
+                        <div>
+                            <p className="text-sm">Sign in to add to favorites</p>
+                        </div>
+                    )}
                 </div>
             </div>
-                ))}
+            ))}
         </div>
 
         {fullImage && ( 
@@ -153,7 +151,7 @@ useEffect(() => {
                 <ul className="space-y-4 mb-8 mt-4">
                     {reviews.map((review) => (
                     <li key={review.id} className="border-2 border-white text-base flex items-center justify-center w-1/2">
-                        <div className="m-4 ">
+                        <div className="m-4 overflow-auto break-words ">
                         <p>Name: {review.name}</p>
                         <p>Email: {review.email}</p>
                         <p>Rating: {review.rating}</p>

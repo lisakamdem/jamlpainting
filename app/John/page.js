@@ -90,20 +90,19 @@ useEffect(() => {
 
   // Array of paintings with details
   const paintings = [
-    { src: "/L/L1.jpg", title: "Charmander By: Lisa", alt: "Charmander" },
-    { src: "/L/L5.jpg", title: "Loudred By: Lisa", alt: "Loudred" },
-    { src: "/L/L3.jpg", title: "Dark Tree By: Lisa", alt: "Dark Tree" },
-    { src: "/L/L4.jpg", title: "Spring Tree By: Lisa", alt: "Spring Tree"},
-    { src: "/L/L2.jpg", title: "4 Season Trees By: Lisa", alt: "4 Season Trees" },
+    { src: "/J/J1.jpg", title: "Squirtle By: John", alt: "Squirtle" },
+    { src: "/J/J4.jpg", title: "Old Day By: John", alt: "Old Day"},
+    { src: "/J/J2.jpg", title: "Natu By: John", alt: "Natu" },
+    { src: "/J/J5.jpg", title: "River By: John", alt: "River" },
+    { src: "/J/J3.jpg", title: "Pattern By: John", alt: "Pattern" },
   ];
 
   return (
     <>
       <Header />
       <article className="bio-image">
-					<h1>Lisa&apos;s paintings</h1>
-					<p className="mt-2">Hello my name is Lisa and when I&apos; not watching the Big Bang Theory, study, working-out or watching Netflix
-					I paint here are some of my paintings</p>
+					<h1>John&apos;s paintings</h1>
+					<p className="mt-2">HELLO MY NAME IS JOHN HERE ARE SOME OF MY PAINTINGS I DO WHEN I AM NOT KICKING SOMEONE'S BUTT AND WATCHING UFC FIGHTS. LOL</p>
 			</article>
 
     <div className="img-gallery">
@@ -143,14 +142,14 @@ useEffect(() => {
          {user && <ReviewForm onAddReview={handleAddReview} />}
           {reviews !== null ? (
             reviews && reviews.length > 0 ? (
-              <ul className="space-y-4 mb-8 mt-4">
+              <ul className="space-y-4 mb-8 mt-4 flex">
                 {reviews.map((review) => (
                   <li key={review.id} className="border-2 border-white text-base flex items-center justify-center w-1/2">
-                    <div className="m-4 overflow-auto break-words ">
+                    <div className="m-4 overflow-auto break-words">
                       <p>Name: {review.name}</p>
                       <p>Email: {review.email}</p>
                       <p>Rating: {review.rating}</p>
-                      <p>Message: {review.message}</p>
+                      <p className="">Message: {review.message}</p>
                       <p className="mb-2">Date: {review.date}</p>
                       { user && <button
                         className="btn btn-wide text-green-400 bg-black hover:text-black hover:bg-green-400 flex justify-center "

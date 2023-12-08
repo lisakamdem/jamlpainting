@@ -41,17 +41,17 @@ export default function Page({ onRemoveFavorite }) {
     
         <Header/>
 
-            <div >
-            <h2 style={{ backgroundColor: "rgb(46,139,87)", color: "rgb(173,216,230)"}}>Favorites</h2>
-            <ul className="img-gallery mb-4">
-                {favoritesList.map((item) => (
-                <li key={item}>
-                    <img src={item} alt={`Favorite ${item.alt}`} />
-                    <p>{item.title}</p>
-                    <button className="btn btn-wide text-green-400 bg-black hover:text-black hover:bg-green-400 ml-10 mt-2" onClick={() => handleRemoveFavorite(item)}>Remove from Favorites</button>
-                </li>
-                ))}
-            </ul>
+            <div>
+              <h2 style={{ backgroundColor: "rgb(46,139,87)", color: "rgb(173,216,230)"}}>Favorites</h2>
+              <ul className="img-gallery mb-4">
+                  {favoritesList.map((item) => (
+                  <li key={item}>
+                      <img src={item} alt={`Favorite ${item.alt}`} />
+                      <p>{item.title}</p>
+                      <button className="btn btn-wide text-green-400 bg-black hover:text-black hover:bg-green-400 ml-10 mt-2" onClick={() => handleRemoveFavorite(item)}>Remove from Favorites</button>
+                  </li>
+                  ))}
+              </ul>
             </div>
 
         <Footer/>

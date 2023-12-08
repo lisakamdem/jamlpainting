@@ -90,20 +90,20 @@ useEffect(() => {
 
   // Array of paintings with details
   const paintings = [
-    { src: "/L/L1.jpg", title: "Charmander By: Lisa", alt: "Charmander" },
-    { src: "/L/L5.jpg", title: "Loudred By: Lisa", alt: "Loudred" },
-    { src: "/L/L3.jpg", title: "Dark Tree By: Lisa", alt: "Dark Tree" },
-    { src: "/L/L4.jpg", title: "Spring Tree By: Lisa", alt: "Spring Tree"},
-    { src: "/L/L2.jpg", title: "4 Season Trees By: Lisa", alt: "4 Season Trees" },
+    { src: "/A/A1.jpg", title: "Joltik By: Axel", alt: "Joltik" },
+    { src: "/A/A5.jpg", title: "Sunset Waterfall By: Axel", alt: "Sunset Waterfall" },
+    { src: "/A/A3.jpg", title: "Aron By: Axel", alt: "Aron" },
+    { src: "/A/A4.jpg", title: "Larvitar By: Axel", alt: "Larvitar"},
+    { src: "/A/A6.jpg", title: "Shiny Growlithe By: Axel", alt: "Shiny Growlithe" },
+    { src: "/A/A2.jpg", title: "Bulbasaur By: Axel", alt: "Bulbasaur" },
   ];
 
   return (
     <>
       <Header />
       <article className="bio-image">
-					<h1>Lisa&apos;s paintings</h1>
-					<p className="mt-2">Hello my name is Lisa and when I&apos; not watching the Big Bang Theory, study, working-out or watching Netflix
-					I paint here are some of my paintings</p>
+					<h1>Axel&apos;s paintings</h1>
+					<p className="mt-2">HELLO MY NAME IS AXEL AND HERE ARE SOME PAINTING I LIKE DO WHEN I'M NOT CATCHING POKEMONS OR WATCHING UFC FIGHTS</p>
 			</article>
 
     <div className="img-gallery">
