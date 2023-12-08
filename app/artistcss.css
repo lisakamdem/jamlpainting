@@ -188,16 +188,25 @@ ul li:hover ul{
 	font-size: 60px;
 	cursor: pointer;
   }
-  
-
 
 .desc{
 	font-family: Garamond, serif;
 	font-weight: bold;
-	font-size: 150%;
+	font-size: 120%;
 	padding: 15px;
 	text-align:center;
 }
+
+.favorite-btn { 
+    background-color: #b91c1c;
+    color: black;
+}
+
+.custom-toast{
+	background-color: rgb(60,179,113);
+	color: black;
+}
+
 
 /*Footer Styles*/
 footer{

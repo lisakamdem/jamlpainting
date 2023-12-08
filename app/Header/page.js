@@ -34,7 +34,7 @@ export default function Header() {
         <header>
 				<div className ="flex">
 					<div className ="logo">
-						<Link href="./">J.A.M.L Paintings</Link>
+						<Link href="/">J.A.M.L Paintings</Link>
 					</div>
 					<nav>
 						<button id="nav-toggle" className="hamburger-menu" onClick={() => { toggleNavMenu(); toggleNavMenuJS(); }}>
@@ -43,18 +43,18 @@ export default function Header() {
 							<span className="strip"></span>
 						</button>
 							<ul id= "nav-menu-container" className={isNavMenu ? 'show' : ''} >
-								<li><Link href="./">Home</Link></li>
+								<li><Link href="/">Home</Link></li>
 								<li className="nested">
 									<Link href="#boxes">Artist</Link>
 									<ul>
-										<li><Link href="./Lisa">Lisa</Link></li>
-										<li><Link href="./Michelle">Michelle</Link></li>
-										<li><a href="john's page.html">John</a></li>
-										<li><a href="axel's page.html">Axel</a></li>
+										<li><Link href="/Lisa">Lisa</Link></li>
+										<li><Link href="/Michelle">Michelle</Link></li>
+										<li><Link href="/John">John</Link></li>
+										<li><Link href="/Axel">Axel</Link></li>
 									</ul>
 								</li>
-								<li><Link href="#aboutus">About Us</Link></li>
-								<li><Link href="#contactus">Contact Us</Link></li>
+								<li><Link href="/#aboutus">About Us</Link></li>
+								<li><Link href="/#contactus">Contact Us</Link></li>
 								<li><Link href="/favorite">Favorites</Link></li>
 								<li><a href="RP.html">Reference page</a></li>
 								<li>

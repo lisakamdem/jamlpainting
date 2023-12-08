@@ -49,7 +49,7 @@ export default function NewReview({onAddReview}) {
 
     return (
         <div>
-            <div className="contact-form ml-80 mb-10 mt-8">
+            <div className="contact-form ml-60 mr-10 mb-10 mt-8">
                 <form id="contact-form" onSubmit={handleSubmit}>
             
                     <div className="rating rating-lg ml-20 ">{stars}</div>
@@ -91,8 +91,7 @@ export default function NewReview({onAddReview}) {
                         onChange={(event) => setMessage(event.target.value)}
                         />
                     </div>
-                
-                 
+
                 
                     <button type="submit" className="btn btn-wide text-green-400 bg-black hover:text-black hover:bg-green-400 ml-16">
                         Add review
