@@ -102,7 +102,7 @@ useEffect(() => {
       <Header />
       <article className="bio-image">
 					<h1>John&apos;s paintings</h1>
-					<p className="mt-2">HELLO MY NAME IS JOHN HERE ARE SOME OF MY PAINTINGS I DO WHEN I AM NOT KICKING SOMEONE'S BUTT AND WATCHING UFC FIGHTS. LOL</p>
+					<p className="mt-2">HELLO MY NAME IS JOHN HERE ARE SOME OF MY PAINTINGS I DO WHEN I AM NOT KICKING SOMEONE&apos;S BUTT AND WATCHING UFC FIGHTS. LOL</p>
 			</article>
 
     <div className="img-gallery">
